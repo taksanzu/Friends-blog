@@ -4,3 +4,9 @@ Author: Taksanzu
 Version: 1.0
 Description: A theme for a blog for friends to share their thoughts and ideas.
 */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e99f9f;
+    color: #333;
+}
