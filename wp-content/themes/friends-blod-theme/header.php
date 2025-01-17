@@ -1,32 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html>
+  <head>
     <?php wp_head(); ?>
-    <title>Friends Blog</title>
-</head>
-
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="<?php echo home_url() ?>">Home <span
-                                class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="school-logo-text float-left">
+          <a href="#"><strong>Friends</strong> Blog</a>
+        </h1>
+        <span class="js-search-trigger site-header__search-trigger"><i class="fa fa-search" aria-hidden="true"></i></span>
+        <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
+        <div class="site-header__menu group">
+          <nav class="main-navigation">
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Programs</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Campuses</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </nav>
+          <div class="site-header__util">
+            <a href="#" class="btn btn--small btn--orange float-left push-right">Login</a>
+            <a href="#" class="btn btn--small btn--dark-orange float-left">Sign Up</a>
+            <span class="search-trigger js-search-trigger"><i class="fa fa-search" aria-hidden="true"></i></span>
+          </div>
+        </div>
+      </div>
     </header>
-    <main class="container">
-        <h1>Friends Blog</h1>
