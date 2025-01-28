@@ -15,3 +15,22 @@ function blog_features() {
 }
 
 add_action('after_setup_theme', 'blog_features');
+
+function blog_post_query($query) {
+  if (!is_admin() && is_post_type_archive('event') && $query->is_main_query()) {
+    $today = date('Ymd');
+    $query->set('meta_key', 'event_date');
+    $query->set('orderby', 'meta_value_num');
+    $query->set('order', 'DESC');
+    $query->set('meta_query', array(
+      array(
+        'key' => 'event_date',
+        'compare' => '>=',
+        'value' => $today,
+        'type' => 'numeric'
+      )
+    ));
+  }
+}
+
+add_action('pre_get_posts', 'blog_post_query');
